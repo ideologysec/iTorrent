@@ -1,0 +1,2 @@
+iTorrent.armv7.framework/ filter=lfs diff=lfs merge=lfs -text
+iTorrent.x64.framework/ filter=lfs diff=lfs merge=lfs -text

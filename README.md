@@ -7,9 +7,12 @@
 
 ![itorrent](https://user-images.githubusercontent.com/9553519/42249216-da6f6190-7f32-11e8-9126-e559be69ebf5.png)
 
-**Download .ipa:** ([Google Drive](https://goo.gl/j2WRbv))
-
 ## Info
+
+## This is fork of iTorrent that removes the need for CocoaPods, and removes ads and the donate button
+## It also sets the background to trueblack in dark mode, to fix battery life and ugliness issues
+
+All credits to XITRIX; throw him some bones if you like the app.
 
 It is an ordinary torrent client for iOS with Files app support.
 
@@ -29,57 +32,29 @@ What can this app do:
 
 ## Localization
 
-Now iTorrent supports the following languages:
+iTorrent supports the following languages:
 - English
 - Russian
 
 If you are fluent in the languages not listed above and want to help with translation, you are welcome!
+Submit a request upstream to the XITRIX repo; I track master as closely as I can.
 
 ## Build
-
-To build that project you need to have Cocoapods installed
-
 Steps:
-- cd terminal to project's folder "cd /home/user/iTorrent"
-- Build pods "pod install"
-- Open .xcworkspace and build it
-- Profit
+- clone the repo
+- choose if you are building for real device or simulator
+- remove armv7 (real) or x64 (simulator) from framework depending on which you want
+- Open .xcworkspace, change organization to your preferred identifier
+- Build it
 
 ### Warning!
-
-This repo contains iTorrent framework which was compiled only for real devices so it will not run on Simulator, if you want to build this app for Simulator, you have to replace itorrent.framework by [this one](https://github.com/XITRIX/iTorrent_Framework/releases)
+This repo contains two iTorrent frameworks. Be sure to rename the correct framework depending on what you are building for.
 
 ## Libraries used
 
 - [LibTorrent](https://github.com/arvidn/libtorrent)
 - [BackgroundTask](https://github.com/yarodevuci/backgroundTask)
 - [Orianne-FTP-Server (My fork)](https://github.com/XITRIX/Orianne-FTP-Server)
-- [MarqueeLabel](https://github.com/cbpowell/MarqueeLabel)
-
-## Donate for donuts
-
-- VISA CARD - 5106 2110 2661 7147
-- [QIWI Moneybox](https://qiwi.me/c5ec30ff-21d6-428b-9a10-29a1d18242db)
-
-## Important information
-
-This app using Firebase Analytics and so it collects next information from your device:
-- The country of your internet provider
-- Time of app's working session
-
-All this data presents as statistic, and cannot be used to get someone's personal information
-
-Also this app using Firebase Crashlytics, which collects the next information when application crashes:
-- Model of your device (IPhone X or IPad Pro (10.5 inch) for example)
-- Device orientation
-- Free space on RAM and ROM
-- IOS version
-- Time of crash
-- Detailed log of the thread where the stuck happens
-
-All this information is using for bug fixing and improving the quality of this app
-
-More information you can find on [Firebase website](https://firebase.google.com)
 
 ## License
 

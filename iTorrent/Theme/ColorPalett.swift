@@ -1,5 +1,5 @@
 //
-//  ColorPalett.swift
+//  ColorPalette.swift
 //  iTorrent
 //
 //  Created by Daniil Vinogradov on 24/06/2018.
@@ -14,18 +14,21 @@ class Themes {
 	
 	static let shared = Themes()
 	
-	var theme : [ColorPalett] = []
+	var theme : [ColorPalette] = []
 	
 	private init() {
-		let darkTheme = ColorPalett()
+		let darkTheme = ColorPalette()
 		
 		darkTheme.mainText = UIColor.white
 		darkTheme.secondaryText = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
 		darkTheme.tertiaryText = UIColor(red: 115/255, green: 115/255, blue: 115/255, alpha: 1)
-		darkTheme.selectedText = UIColor(red: 255/255, green: 255/255, blue: 120/255, alpha: 1)
+		//darkTheme.selectedText = UIColor(red: 255/255, green: 255/255, blue: 120/255, alpha: 1)
+        darkTheme.selectedText = UIColor.orange
 		darkTheme.backgroundMain = UIColor.black
-		darkTheme.backgroundSecondary = UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
-		darkTheme.backgroundTertiary = UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
+        darkTheme.backgroundSecondary = UIColor.black
+        darkTheme.backgroundTertiary = UIColor.black
+		//darkTheme.backgroundSecondary = UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
+		//darkTheme.backgroundTertiary = UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
 		darkTheme.tableHeaderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 0.9)
 		darkTheme.actionCancelButtonColor = UIColor(red: 28.0/255.0, green: 28.0/255.0, blue: 28.0/255.0, alpha: 1.0)
 		darkTheme.actionButtonColor = .orange
@@ -35,17 +38,17 @@ class Themes {
 		darkTheme.keyboardAppearence = .dark
 		darkTheme.loadingIndicatorStyle = .white
 		
-		theme.append(ColorPalett())
+		theme.append(ColorPalette())
 		theme.append(darkTheme)
 	}
 	
-	static func current() -> ColorPalett {
+	static func current() -> ColorPalette {
 		return shared.theme[UserDefaults.standard.integer(forKey: UserDefaultsKeys.themeNum)]
 	}
 	
 }
 
-class ColorPalett {
+class ColorPalette {
 	var mainText = UIColor.black
 	var secondaryText = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
 	var tertiaryText = UIColor(red: 140/255, green: 140/255, blue: 140/255, alpha: 1)
@@ -58,7 +61,7 @@ class ColorPalett {
 	var actionButtonColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
 	var statusBarStyle : UIStatusBarStyle = .default
 	var barStyle : UIBarStyle = .default
-	var blurEffect : UIBlurEffectStyle = .extraLight
+	var blurEffect : UIBlurEffect.Style = .extraLight
 	var keyboardAppearence : UIKeyboardAppearance = .default
-	var loadingIndicatorStyle : UIActivityIndicatorViewStyle = .gray
+	var loadingIndicatorStyle : UIActivityIndicatorView.Style = .gray
 }

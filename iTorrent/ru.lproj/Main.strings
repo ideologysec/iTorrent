@@ -188,9 +188,6 @@
 /* Class = "UILabel"; text = "Seeders"; ObjectID = "ekS-WN-Tu8"; */
 "ekS-WN-Tu8.text" = "Сиды";
 
-/* Class = "UITableViewSection"; headerTitle = "Donate for donuts"; ObjectID = "f0A-fe-3qf"; */
-"f0A-fe-3qf.headerTitle" = "Донат на еду";
-
 /* Class = "UILabel"; text = "Label"; ObjectID = "gcE-G8-T43"; */
 "gcE-G8-T43.text" = "Label";
 
@@ -203,7 +200,7 @@
 /* Class = "UILabel"; text = "1024 MB"; ObjectID = "hrV-Dx-Iw2"; */
 "hrV-Dx-Iw2.text" = "1024 MB";
 
-/* Class = "UILabel"; text = "Sections order"; ObjectID = "TC9-yd-pmX"; */
+/* Class = "UILabel"; text = "Section order"; ObjectID = "TC9-yd-pmX"; */
 "A0D-cC-LGB.text" = "Порядок секций";
 
 /* Class = "UIButton"; normalTitle = "1024 MB/S"; ObjectID = "i6i-JH-VXn"; */
@@ -251,7 +248,7 @@
 /* Class = "UITableViewSection"; headerTitle = "Speed limitation"; ObjectID = "t8j-hz-Rpg"; */
 "t8j-hz-Rpg.headerTitle" = "Ограничение скорости";
 
-/* Class = "UINavigationItem"; title = "Sections order"; ObjectID = "tKt-R3-aos"; */
+/* Class = "UINavigationItem"; title = "Section order"; ObjectID = "tKt-R3-aos"; */
 "tKt-R3-aos.title" = "Порядок секций";
 
 /* Class = "UILabel"; text = "Allow seeding"; ObjectID = "tPP-KE-5PY"; */

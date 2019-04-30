@@ -35,7 +35,7 @@ class SettingsController: ThemedUITableViewController {
 	override func themeUpdate() {
 		super.themeUpdate()
 		
-		updateLoading.activityIndicatorViewStyle = Themes.current().loadingIndicatorStyle
+		updateLoading.style = Themes.current().loadingIndicatorStyle
 	}
     
 	override func viewDidLoad() {
@@ -77,9 +77,6 @@ class SettingsController: ThemedUITableViewController {
 		} else {
 			downloadLimitButton.setTitle(Utils.getSizeText(size: down, decimals: true) + "/S", for: .normal)
 		}
-		
-		let disabledAds = UserDefaults.standard.bool(forKey: UserDefaultsKeys.disableAds)
-		adsSwitch.setOn(disabledAds, animated: false)
 		
 		checkUpdates()
     }
@@ -291,7 +288,7 @@ class SettingsController: ThemedUITableViewController {
         func open (scheme: String) {
             if let url = URL(string: scheme) {
                 if #available(iOS 10, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                 }
                 else {
                     UIApplication.shared.openURL(url)
@@ -343,4 +340,9 @@ class SettingsController: ThemedUITableViewController {
 			}
 		}
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

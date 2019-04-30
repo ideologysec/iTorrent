@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-import MarqueeLabel
+//import MarqueeLabel
 
 @IBDesignable
 class FileManagerTitleView : UIView, Themed {
 	@IBOutlet var contentView: UIView!
-	@IBOutlet weak var title: MarqueeLabel!
-	@IBOutlet weak var subTitle: MarqueeLabel!
+	//@IBOutlet weak var title: MarqueeLabel!
+	//@IBOutlet weak var subTitle: MarqueeLabel!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subTitle: UILabel!
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)

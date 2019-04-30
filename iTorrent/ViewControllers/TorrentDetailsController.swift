@@ -8,8 +8,7 @@
 
 import Foundation
 import UIKit
-
-import MarqueeLabel
+//import MarqueeLabel
 
 class TorrentDetailsController: ThemedUITableViewController {
 	@IBOutlet weak var shareButton: UIBarButtonItem!
@@ -85,7 +84,8 @@ class TorrentDetailsController: ThemedUITableViewController {
 		
 		// MARQUEE LABEL
 		let theme = Themes.current()
-		let label = MarqueeLabel.init(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44), duration: 8.0, fadeLength: 10)
+		//let label = MarqueeLabel.init(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44), duration: 8.0, fadeLength: 10)
+        let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
 		label.font = UIFont.boldSystemFont(ofSize: 17)
 		label.textAlignment = NSTextAlignment.center
 		label.textColor = theme.mainText

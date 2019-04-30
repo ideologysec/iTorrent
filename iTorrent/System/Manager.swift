@@ -315,7 +315,7 @@ class Manager {
 				
 				content.title = NSLocalizedString("Download finished", comment: "")
 				content.body = manager.title + NSLocalizedString(" finished downloading", comment: "")
-				content.sound = UNNotificationSound.default()
+				content.sound = UNNotificationSound.default
 				
 				let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 				let identifier = manager.hash;
@@ -346,7 +346,7 @@ class Manager {
 				
 				content.title = NSLocalizedString("Seeding finished", comment: "")
 				content.body = manager.title + NSLocalizedString(" finished seeding", comment: "")
-				content.sound = UNNotificationSound.default()
+				content.sound = UNNotificationSound.default
 				
 				let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 				let identifier = manager.hash;
